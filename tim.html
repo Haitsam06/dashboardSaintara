@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manajemen Tim - SAINTARA Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "saintara-yellow": "#FBBF24",
+              "saintara-dark": "#1F2937",
+              "saintara-light": "#F9FAFB",
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex h-screen bg-saintara-light">
+      <aside class="w-64 flex-shrink-0 flex flex-col bg-saintara-dark text-white">
+        <div class="h-20 flex items-center justify-center border-b border-gray-700">
+          <h1 class="text-2xl font-bold tracking-wider">SAINTARA</h1>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2">
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-900 bg-saintara-yellow rounded-lg font-semibold">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M3 6h18"></path>
+            </svg>
+            Dashboard
+          </a>
+          <a href="agenda.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            Agenda
+          </a>
+          <a href="pengguna.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Pengguna
+          </a>
+          <a href="keuangan.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            Keuangan
+          </a>
+          <a href="tim.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.184-1.268-.5-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.184-1.268.5-1.857m0 0a5.002 5.002 0 019 0m-4.5 4.5a5.002 5.002 0 01-9 0m5.356-1.857a3 3 0 00-5.356 0m0 0A5.002 5.002 0 013 16m0 0a5 5 0 015-5m5 5a5 5 0 005-5m-5 5a5 5 0 01-5-5m0 0A5.002 5.002 0 0112 6a5 5 0 015 5m-5 5a3 3 0 00-5.356 0"
+              ></path>
+            </svg>
+            Tim
+          </a>
+          <a href="bantuan.html " class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Bantuan dan Layanan
+          </a>
+          <a href="pengaturan.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              ></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Pengaturan
+          </a>
+        </nav>
+        <div class="px-4 py-4 border-t border-gray-700">
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+            </svg>
+            Log Out
+          </a>
+        </div>
+      </aside>
+
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <header class="h-20 flex items-center justify-between px-8 bg-white border-b">
+          <h2 class="text-2xl font-bold text-gray-800">Manajemen Tim</h2>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-saintara-light p-8">
+          <div class="mb-4 border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="timTab" data-tabs-toggle="#timTabContent" role="tablist">
+              <li class="me-2" role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg" id="absensi-tab" data-tabs-target="#absensi" type="button" role="tab" aria-controls="absensi" aria-selected="true">Data Absensi</button></li>
+              <li class="me-2" role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="laporan-tab" data-tabs-target="#laporan" type="button" role="tab" aria-controls="laporan" aria-selected="false">Laporan Kerja</button></li>
+              <li class="me-2" role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="gaji-tab" data-tabs-target="#gaji" type="button" role="tab" aria-controls="gaji" aria-selected="false">Gaji</button></li>
+              <li class="me-2" role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="komisi-tab" data-tabs-target="#komisi" type="button" role="tab" aria-controls="komisi" aria-selected="false">Komisi</button></li>
+              <li role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="performa-tab" data-tabs-target="#performa" type="button" role="tab" aria-controls="performa" aria-selected="false">Performa</button></li>
+            </ul>
+          </div>
+
+          <div id="timTabContent">
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="absensi" role="tabpanel" aria-labelledby="absensi-tab">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">Absensi Bulan Oktober 2025</h3>
+                <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-64 p-2.5" placeholder="Pilih Rentang Tanggal" />
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">Nama Anggota</th>
+                      <th scope="col" class="px-6 py-3">Tanggal</th>
+                      <th scope="col" class="px-6 py-3">Jam Masuk</th>
+                      <th scope="col" class="px-6 py-3">Jam Pulang</th>
+                      <th scope="col" class="px-6 py-3">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                      <td class="px-6 py-4">Andi Klindy</td>
+                      <td class="px-6 py-4">5 Okt 2025</td>
+                      <td class="px-6 py-4">08:55</td>
+                      <td class="px-6 py-4">17:05</td>
+                      <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Hadir</span></td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                      <td class="px-6 py-4">Lia Kaula</td>
+                      <td class="px-6 py-4">5 Okt 2025</td>
+                      <td class="px-6 py-4">-</td>
+                      <td class="px-6 py-4">-</td>
+                      <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Absen</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="laporan" role="tabpanel" aria-labelledby="laporan-tab">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">Daftar Laporan Kerja Harian</h3>
+                <button data-modal-target="add-report-modal" data-modal-toggle="add-report-modal" type="button" class="text-white bg-amber-500 hover:bg-amber-600 font-medium rounded-lg text-sm px-5 py-2.5">Buat Laporan Baru</button>
+              </div>
+              <div class="space-y-3">
+                <div class="p-4 border rounded-lg flex justify-between items-center">
+                  <div>
+                    <p class="font-semibold">Laporan - Bayu Subaya</p>
+                    <p class="text-sm text-gray-500">Tanggal: 5 Oktober 2025</p>
+                  </div>
+                  <a href="#" class="font-medium text-amber-600 hover:underline">Lihat Laporan</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="gaji" role="tabpanel" aria-labelledby="gaji-tab">
+              <h3 class="text-lg font-semibold mb-4">Penggajian Periode Oktober 2025</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">Nama Karyawan</th>
+                      <th scope="col" class="px-6 py-3">Jabatan</th>
+                      <th scope="col" class="px-6 py-3">Gaji Bersih</th>
+                      <th scope="col" class="px-6 py-3">Status</th>
+                      <th scope="col" class="px-6 py-3">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                      <td class="px-6 py-4">Bayu Subaya</td>
+                      <td class="px-6 py-4">IT Support</td>
+                      <td class="px-6 py-4 font-semibold">Rp5.500.000</td>
+                      <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Sudah Dibayar</span></td>
+                      <td class="px-6 py-4"><a href="#" class="font-medium text-amber-600 hover:underline">Lihat Rincian</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="komisi" role="tabpanel" aria-labelledby="komisi-tab">
+              <h3 class="text-lg font-semibold mb-4">Komisi Agen Periode Oktober 2025</h3>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-gray-50" id="performa" role="tabpanel" aria-labelledby="performa-tab">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Performa Tim & Agen</h3>
+              <div class="p-6 bg-white rounded-lg shadow-md mb-6">
+                <h4 class="font-semibold text-lg text-gray-700 mb-3">Pencapaian Target Tim Marketing</h4>
+                <div class="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+                  <p class="text-gray-500">Grafik Performa Tim akan ditampilkan di sini</p>
+                </div>
+              </div>
+              <div class="p-6 bg-white rounded-lg shadow-md">
+                <h4 class="font-semibold text-lg text-gray-700 mb-3">Pencapaian Individu (Agen)</h4>
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span class="text-base font-medium text-gray-700">Agen A - Rina Wulandari</span>
+                      <span class="text-sm font-medium text-gray-700">85 dari 100 Tes</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                      <div class="bg-amber-500 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div id="add-report-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full">
+      <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+        <div class="relative bg-white rounded-lg shadow">
+          <div class="flex items-center justify-between p-4 border-b">
+            <h3 class="text-xl font-semibold text-gray-900">Buat Laporan Kerja Harian</h3>
+            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="add-report-modal">
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" /></svg>
+            </button>
+          </div>
+          <div class="p-5 space-y-4">
+            <form action="#">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="block mb-2 text-sm font-medium text-gray-900">Tanggal Laporan</label>
+                  <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" required />
+                </div>
+              </div>
+              <div class="mt-4">
+                <label class="block mb-2 text-sm font-medium text-gray-900">Pekerjaan yang Diselesaikan Hari Ini</label>
+                <textarea rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" placeholder="Jelaskan pekerjaan Anda..."></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="flex items-center p-4 border-t rounded-b">
+            <button type="button" class="text-white bg-amber-500 hover:bg-amber-600 font-medium rounded-lg text-sm px-5 py-2.5">Kirim Laporan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+  </body>
+</html>

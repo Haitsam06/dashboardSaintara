@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bantuan & Layanan - SAINTARA Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "saintara-yellow": "#FBBF24",
+              "saintara-dark": "#1F2937",
+              "saintara-light": "#F9FAFB",
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex h-screen bg-saintara-light">
+      <aside class="w-64 flex-shrink-0 flex flex-col bg-saintara-dark text-white">
+        <div class="h-20 flex items-center justify-center border-b border-gray-700">
+          <h1 class="text-2xl font-bold tracking-wider">SAINTARA</h1>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2">
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-900 bg-saintara-yellow rounded-lg font-semibold">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M3 6h18"></path>
+            </svg>
+            Dashboard
+          </a>
+          <a href="agenda.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            Agenda
+          </a>
+          <a href="pengguna.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Pengguna
+          </a>
+          <a href="keuangan.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            Keuangan
+          </a>
+          <a href="tim.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.184-1.268-.5-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.184-1.268.5-1.857m0 0a5.002 5.002 0 019 0m-4.5 4.5a5.002 5.002 0 01-9 0m5.356-1.857a3 3 0 00-5.356 0m0 0A5.002 5.002 0 013 16m0 0a5 5 0 015-5m5 5a5 5 0 005-5m-5 5a5 5 0 01-5-5m0 0A5.002 5.002 0 0112 6a5 5 0 015 5m-5 5a3 3 0 00-5.356 0"
+              ></path>
+            </svg>
+            Tim
+          </a>
+          <a href="bantuan.html " class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Bantuan dan Layanan
+          </a>
+          <a href="pengaturan.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              ></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Pengaturan
+          </a>
+        </nav>
+        <div class="px-4 py-4 border-t border-gray-700">
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+            </svg>
+            Log Out
+          </a>
+        </div>
+      </aside>
+
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <header class="h-20 flex items-center justify-between px-8 bg-white border-b">
+          <h2 class="text-2xl font-bold text-gray-800">Bantuan & Layanan</h2>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-saintara-light p-8">
+          <div class="mb-4 border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="bantuanTab" data-tabs-toggle="#bantuanTabContent" role="tablist">
+              <li class="me-2" role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg" id="persetujuan-tab" data-tabs-target="#persetujuan" type="button" role="tab" aria-controls="persetujuan" aria-selected="true">Persetujuan</button></li>
+              <li class="me-2" role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="komplain-tab" data-tabs-target="#komplain" type="button" role="tab" aria-controls="komplain" aria-selected="false">Komplain</button></li>
+              <li class="me-2" role="presentation"><button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="perbaikan-tab" data-tabs-target="#perbaikan" type="button" role="tab" aria-controls="perbaikan" aria-selected="false">Perbaikan</button></li>
+            </ul>
+          </div>
+
+          <div id="bantuanTabContent">
+            <div class="hidden rounded-lg bg-gray-50 p-4" id="persetujuan" role="tabpanel" aria-labelledby="persetujuan-tab">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Permohonan Persetujuan (3)</h3>
+              <div class="space-y-4">
+                <div class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start md:items-center justify-between">
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 22.52a.75.75 0 01-.63-.331l-4.5-8.25a.75.75 0 011.26-.678l4.5 8.25a.75.75 0 01-.63.999z" />
+                        <path d="M12 22.52a.75.75 0 00.63-.331l4.5-8.25a.75.75 0 00-1.26-.678l-4.5 8.25a.75.75 0 00.63.999z" />
+                        <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 00-5.25 5.25c0 3.866 4.5 10.5 5.25 10.5s5.25-6.634 5.25-10.5A5.25 5.25 0 0012 1.5zm0 7.5a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <div class="ml-4">
+                      <p class="font-semibold text-gray-900">Penawaran Kerja Sama - PT Maju Jaya</p>
+                      <p class="text-sm text-gray-500">Diajukan oleh: Tim Marketing | 5 Oktober 2025</p>
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0 flex space-x-2 mt-4 md:mt-0">
+                    <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100">Tolak</button>
+                    <button class="px-4 py-2 text-sm font-medium text-white bg-green-600 border border-green-600 rounded-lg hover:bg-green-700">Setujui</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="komplain" role="tabpanel" aria-labelledby="komplain-tab">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <div class="bg-orange-50 p-6 rounded-lg">
+                  <p class="text-sm text-orange-800">Tiket Baru</p>
+                  <p class="text-3xl font-bold text-orange-900">5</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg">
+                  <p class="text-sm text-blue-800">Sedang Diproses</p>
+                  <p class="text-3xl font-bold text-blue-900">12</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg">
+                  <p class="text-sm text-green-800">Selesai</p>
+                  <p class="text-3xl font-bold text-green-900">150</p>
+                </div>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">ID Tiket</th>
+                      <th scope="col" class="px-6 py-3">Pelapor</th>
+                      <th scope="col" class="px-6 py-3">Subjek</th>
+                      <th scope="col" class="px-6 py-3">Prioritas</th>
+                      <th scope="col" class="px-6 py-3">Status</th>
+                      <th scope="col" class="px-6 py-3">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                      <td class="px-6 py-4 font-mono">#TKT-00125</td>
+                      <td class="px-6 py-4">pengguna@email.com (Personal)</td>
+                      <td class="px-6 py-4">Tidak bisa download hasil tes</td>
+                      <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Tinggi</span></td>
+                      <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Diproses</span></td>
+                      <td class="px-6 py-4"><a href="#" class="font-medium text-amber-600 hover:underline">Lihat Detail</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="perbaikan" role="tabpanel" aria-labelledby="perbaikan-tab">
+              <h3 class="text-lg font-semibold mb-4">Status Perbaikan Komplain</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">ID Tiket</th>
+                      <th scope="col" class="px-6 py-3">Subjek Komplain</th>
+                      <th scope="col" class="px-6 py-3">Penanggung Jawab</th>
+                      <th scope="col" class="px-6 py-3">Status Perbaikan</th>
+                      <th scope="col" class="px-6 py-3">Tanggal Selesai</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                      <td class="px-6 py-4 font-mono">#TKT-00125</td>
+                      <td class="px-6 py-4">Tidak bisa download hasil tes</td>
+                      <td class="px-6 py-4">Bayu Subaya (Tim IT)</td>
+                      <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Investigasi</span></td>
+                      <td class="px-6 py-4">-</td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                      <td class="px-6 py-4 font-mono">#TKT-00124</td>
+                      <td class="px-6 py-4">Voucher tidak bisa digunakan</td>
+                      <td class="px-6 py-4">Tim Marketing</td>
+                      <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Selesai</span></td>
+                      <td class="px-6 py-4">4 Okt 2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengguna - SAINTARA Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "saintara-yellow": "#FBBF24",
+              "saintara-dark": "#1F2937",
+              "saintara-light": "#F9FAFB",
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex h-screen bg-saintara-light">
+      <aside class="w-64 flex-shrink-0 flex flex-col bg-saintara-dark text-white">
+        <div class="h-20 flex items-center justify-center border-b border-gray-700">
+          <h1 class="text-2xl font-bold tracking-wider">SAINTARA</h1>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2">
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-900 bg-saintara-yellow rounded-lg font-semibold">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18M3 6h18"></path>
+            </svg>
+            Dashboard
+          </a>
+          <a href="agenda.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            Agenda
+          </a>
+          <a href="pengguna.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Pengguna
+          </a>
+          <a href="keuangan.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            Keuangan
+          </a>
+          <a href="tim.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.184-1.268-.5-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.184-1.268.5-1.857m0 0a5.002 5.002 0 019 0m-4.5 4.5a5.002 5.002 0 01-9 0m5.356-1.857a3 3 0 00-5.356 0m0 0A5.002 5.002 0 013 16m0 0a5 5 0 015-5m5 5a5 5 0 005-5m-5 5a5 5 0 01-5-5m0 0A5.002 5.002 0 0112 6a5 5 0 015 5m-5 5a3 3 0 00-5.356 0"
+              ></path>
+            </svg>
+            Tim
+          </a>
+          <a href="bantuan.html " class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Bantuan dan Layanan
+          </a>
+          <a href="pengaturan.html" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              ></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Pengaturan
+          </a>
+        </nav>
+        <div class="px-4 py-4 border-t border-gray-700">
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+            </svg>
+            Log Out
+          </a>
+        </div>
+      </aside>
+
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <header class="h-20 flex items-center justify-between px-8 bg-white border-b">
+          <h2 class="text-2xl font-bold text-gray-800">Manajemen Pengguna</h2>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-saintara-light p-8">
+          <div class="mb-4 border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+              <li class="me-2" role="presentation">
+                <button class="inline-block p-4 border-b-2 rounded-t-lg" id="personal-tab" data-tabs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="false">Personal</button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="sekolah-tab" data-tabs-target="#sekolah" type="button" role="tab" aria-controls="sekolah" aria-selected="false">Sekolah</button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="instansi-tab" data-tabs-target="#instansi" type="button" role="tab" aria-controls="instansi" aria-selected="false">Instansi / Organisasi</button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="hadiah-tab" data-tabs-target="#hadiah" type="button" role="tab" aria-controls="hadiah" aria-selected="false">Hadiah / Gift</button>
+              </li>
+              <li role="presentation">
+                <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="loyalitas-tab" data-tabs-target="#loyalitas" type="button" role="tab" aria-controls="loyalitas" aria-selected="false">Loyalitas & Performa</button>
+              </li>
+            </ul>
+          </div>
+
+          <div id="myTabContent">
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+              <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+                <div class="w-full md:w-1/2">
+                  <form class="flex items-center">
+                    <label for="simple-search" class="sr-only">Cari</label>
+                    <div class="relative w-full">
+                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full pl-10 p-2" placeholder="Cari pengguna" />
+                    </div>
+                  </form>
+                </div>
+                <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                  <button type="button" class="flex items-center justify-center text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:ring-amber-300 font-medium rounded-lg text-sm px-4 py-2">
+                    <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                    </svg>
+                    Tambah Pengguna
+                  </button>
+                </div>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3">Nama</th>
+                      <th scope="col" class="px-6 py-3">Email</th>
+                      <th scope="col" class="px-6 py-3">Tanggal Tes Terakhir</th>
+                      <th scope="col" class="px-6 py-3">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Budi Susanto</th>
+                      <td class="px-6 py-4">budi.susanto@example.com</td>
+                      <td class="px-6 py-4">2025-10-01</td>
+                      <td class="px-6 py-4"><a href="#" class="font-medium text-amber-600 hover:underline">Edit</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav class="flex items-center justify-between pt-4" aria-label="Table navigation">
+                <span class="text-sm font-normal text-gray-500">
+                  Showing
+                  <span class="font-semibold text-gray-900">1-10</span>
+                  of
+                  <span class="font-semibold text-gray-900">1000</span>
+                </span>
+                <ul class="inline-flex -space-x-px text-sm h-8">
+                  <li><a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">Previous</a></li>
+                  <li><a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="sekolah" role="tabpanel" aria-labelledby="sekolah-tab">
+              <p class="text-sm text-gray-500">
+                Tabel data
+                <strong class="font-medium text-gray-800">Sekolah</strong>
+                yang terdaftar dan volume tes per sekolah.
+              </p>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="instansi" role="tabpanel" aria-labelledby="instansi-tab">
+              <p class="text-sm text-gray-500">
+                Tabel data
+                <strong class="font-medium text-gray-800">Instansi / Organisasi</strong>
+                yang terdaftar dan volume peserta.
+              </p>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-white shadow-md" id="hadiah" role="tabpanel" aria-labelledby="hadiah-tab">
+              <p class="text-sm text-gray-500">
+                Tabel data
+                <strong class="font-medium text-gray-800">Donatur (Gift)</strong>
+                yang terdaftar dan volume tes per donatur.
+              </p>
+            </div>
+
+            <div class="hidden p-4 rounded-lg bg-gray-50" id="loyalitas" role="tabpanel" aria-labelledby="loyalitas-tab">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Peringkat Pengguna Teratas</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                  <h4 class="font-semibold text-lg text-gray-700 mb-3">Top 3 Personal</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center p-3 rounded-lg bg-amber-50">
+                      <svg class="w-6 h-6 text-amber-400 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12.75 21a.75.75 0 01-.75-.75v-4.5a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75h-.008zM12 2.25a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75V3a.75.75 0 01.75-.75zM12 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15.75 3a.75.75 0 01.604.29l1.5 2.25a.75.75 0 01-1.208.812l-1.5-2.25A.75.75 0 0115.75 3zM8.25 3a.75.75 0 01.75.75v.008a.75.75 0 01-1.5 0V3.75A.75.75 0 018.25 3zM4.94 5.29a.75.75 0 011.208-.812l1.5 2.25a.75.75 0 11-1.208.812l-1.5-2.25zM19.06 5.29a.75.75 0 01.104 1.054l-1.5 2.25a.75.75 0 11-1.208-.812l1.5-2.25a.75.75 0 011.104-.242zM4.939 9.94a.75.75 0 011.06-1.06l2.25 2.25a.75.75 0 01-1.06 1.06l-2.25-2.25zM17.07 9.94a.75.75 0 011.06 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l2.25-2.25z"
+                        />
+                      </svg>
+                      <span class="font-medium text-gray-800">1. Rina Wulandari</span>
+                      <span class="ml-auto text-sm text-gray-500">15 Tes</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                  <h4 class="font-semibold text-lg text-gray-700 mb-3">Top 3 Sekolah</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center p-3 rounded-lg bg-gray-100">
+                      <svg class="w-6 h-6 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          fill-rule="evenodd"
+                          d="M4.5 3.75a3 3 0 00-3 3v10.5a3 3 0 003 3h15a3 3 0 003-3V6.75a3 3 0 00-3-3h-15zm4.125 3a.75.75 0 000 1.5h6.75a.75.75 0 000-1.5h-6.75zm0 3.75a.75.75 0 000 1.5h6.75a.75.75 0 000-1.5h-6.75zm0 3.75a.75.75 0 000 1.5h6.75a.75.75 0 000-1.5h-6.75z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="font-medium text-gray-800">1. SMA N 1 Maju Jaya</span>
+                      <span class="ml-auto text-sm text-gray-500">520 Tes</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                  <h4 class="font-semibold text-lg text-gray-700 mb-3">Top 3 Instansi</h4>
+                  <ul class="space-y-3">
+                    <li class="flex items-center p-3 rounded-lg bg-blue-50">
+                      <svg class="w-6 h-6 text-blue-500 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.5 6.375a4.125 4.125 0 018.25 0V12h4.125c.621 0 1.125.504 1.125 1.125V15.75a4.125 4.125 0 01-8.25 0V12H4.5v3.75A4.125 4.125 0 01.375 12V6.375A4.125 4.125 0 014.5 6.375zM12 12.75a2.625 2.625 0 100-5.25 2.625 2.625 0 000 5.25z" />
+                        <path d="M10.875 14.625a2.625 2.625 0 100-5.25 2.625 2.625 0 000 5.25zM15.125 14.625a2.625 2.625 0 100-5.25 2.625 2.625 0 000 5.25z" />
+                      </svg>
+                      <span class="font-medium text-gray-800">1. PT Sejahtera Abadi</span>
+                      <span class="ml-auto text-sm text-gray-500">250 Peserta</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
