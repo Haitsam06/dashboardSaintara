@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Pengguna - SAINTARA Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "saintara-yellow": "#FBBF24",
+              "saintara-dark": "#1F2937",
+              "saintara-light": "#F9FAFB",
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex h-screen bg-saintara-light">
+      <aside class="w-64 flex-shrink-0 flex flex-col bg-saintara-dark text-white">
+        <div class="h-20 flex items-center justify-center border-b border-gray-700">
+          <h1 class="text-2xl font-bold tracking-wider">SAINTARA</h1>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2">
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-300 hover:bg-gray-700 rounded-lg">Beranda</a>
+          <a href="#" class="flex items-center px-4 py-2.5 text-gray-900 bg-saintara-yellow rounded-lg font-semibold">Profil</a>
+        </nav>
+      </aside>
+
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <header class="h-20 flex items-center justify-between px-8 bg-white border-b">
+          <h2 class="text-2xl font-bold text-gray-800">Profil Akun</h2>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-saintara-light p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-1">
+              <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://ui-avatars.com/api/?name=Budi+Susanto&size=128&background=FBBF24&color=1F2937" alt="Foto Profil Budi Susanto" />
+                <h3 class="text-xl font-semibold text-gray-800">Budi Susanto</h3>
+                <p class="text-sm text-gray-500 mb-4">budi.susanto@example.com</p>
+                <button class="w-full px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-200 rounded-lg hover:bg-gray-200">Ubah Foto</button>
+              </div>
+              <div class="p-6 mt-6 bg-white rounded-lg shadow-md">
+                <h4 class="text-lg font-semibold text-gray-800 mb-3">Status Akun</h4>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Tipe Akun:</span>
+                    <span class="text-sm font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">Premium</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Token Tersedia:</span>
+                    <span class="text-sm font-semibold text-gray-800">5 Token</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-2">
+              <form class="p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6 border-b pb-4">Edit Data Diri</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="nama_lengkap" class="block mb-2 text-sm font-medium text-gray-900">Nama Lengkap</label>
+                    <input type="text" id="nama_lengkap" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Masukkan nama lengkap" value="Budi Susanto" required />
+                  </div>
+                  <div>
+                    <label for="nama_panggilan" class="block mb-2 text-sm font-medium text-gray-900">Nama Panggilan</label>
+                    <input type="text" id="nama_panggilan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Masukkan nama panggilan" value="Budi" required />
+                  </div>
+                  <div>
+                    <label for="jenis_kelamin" class="block mb-2 text-sm font-medium text-gray-900">Jenis Kelamin</label>
+                    <select id="jenis_kelamin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5">
+                      <option>Pilih Jenis Kelamin</option>
+                      <option selected>Pria</option>
+                      <option>Wanita</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="no_telepon" class="block mb-2 text-sm font-medium text-gray-900">No Telephone</label>
+                    <input type="tel" id="no_telepon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="+62 XXX XXXX XXX" value="+62 812 3456 7890" />
+                  </div>
+                  <div>
+                    <label for="gol_darah" class="block mb-2 text-sm font-medium text-gray-900">Golongan Darah</label>
+                    <select id="gol_darah" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5">
+                      <option>Pilih Golongan Darah</option>
+                      <option>A</option>
+                      <option selected>B</option>
+                      <option>AB</option>
+                      <option>O</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="nama@email.com" value="budi.susanto@example.com" />
+                  </div>
+                  <div>
+                    <label for="negara" class="block mb-2 text-sm font-medium text-gray-900">Negara</label>
+                    <input type="text" id="negara" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Masukkan negara" value="Indonesia" />
+                  </div>
+                  <div>
+                    <label for="kota" class="block mb-2 text-sm font-medium text-gray-900">Kota</label>
+                    <input type="text" id="kota" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Masukkan kota" value="Bogor" />
+                  </div>
+                </div>
+                <div class="mt-8 text-right">
+                  <button type="submit" class="text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Simpan Perubahan</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
